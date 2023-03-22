@@ -37,11 +37,7 @@
 @media screen and (min-width: 360px) and (max-width:510px){
     a{
         text-decoration: underline;
-    }
-    nav a{
-        /* text-decoration: none; */
-    }
-    
+    }  
 }
 
 /* desktops and larger screens */
