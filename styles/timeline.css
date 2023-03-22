@@ -85,3 +85,27 @@
 }
 
 /* Your code here */
+
+@media screen and (max-width:1200px) {
+    .timeline-scroll-area{
+      display: flex;
+      flex-wrap: wrap;
+      /* min-height: 300px; */
+      overflow-x: auto;
+      width: auto;
+    }
+}
+
+/* Printing of Timeline */
+@media print and (orientation:landscape) {
+    .timeline,
+    .timeline-labels {
+        min-width: unset;
+    }
+
+    .timeline-scroll-area {
+        transform: translate(-1.1rem) scale(0.90);
+
+    }
+}
+

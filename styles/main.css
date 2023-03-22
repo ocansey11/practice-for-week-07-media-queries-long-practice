@@ -52,4 +52,158 @@ nav a.selected {
     cursor: default;
 }
 
+
 /* Your code here */
+/* i changed the value here before viewing the mock up */
+@media print and (orientation:portrait) and (orientation:landscape){
+    nav{
+        display: none;
+    }
+    header .homepage{
+        width: fit-content;
+        background-image: none;
+    }  
+}
+
+@media screen and (max-height:640px) {
+    header .homepage{
+        width:220px;
+    }
+    
+}
+
+/* for Mobiles */
+@media screen and (min-width: 360px) and (max-width:510px){
+    a{
+        text-decoration: underline;
+    }
+    nav a{
+        /* text-decoration: none; */
+    }
+    
+}
+
+/* desktops and larger screens */
+@media screen and (min-width:910px){
+    a {
+        text-decoration: none;
+         }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media print {
+    .image__preview{
+        position: relative;
+    }
+
+    .credits{
+        position: absolute;
+        bottom:1rem;
+        left:30%;
+    }
+     .notPrinted{
+        display: none
+    }
+}
+
+/* Narrow */
+@media screen and (max-width :600px){
+    .photo-card a{
+        text-decoration:none ;
+    }
+}
+
+/* Moderate */
+@media print,screen and (min-width:601px) and (max-width :900px) {
+    .photo-card{
+        display: grid;
+        grid-template-columns: 100% ;
+    }
+    .photo-card .content{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .photo-card .content > img {
+       min-width: 100px; 
+       height: 100%;
+    }
+    .photo-card h3, .photo-card a{
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+    }
+    .photo-card p{
+        max-width: 90%;
+    }
+
+    /* Print */
+    .wider__screen__anim{
+        page-break-inside: avoid;
+    }
+    h3{
+        page-break-before: avoid;
+    }
+}
+/* Wider */
+@media screen and (min-width :1200px) and (max-width:1500px ) {
+    html{
+        padding: 0;
+        margin: 0px 20px;
+    }
+    .wider__screen__photo, .wider__screen__anim {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
+    }
+    .photo-card .content{
+        display: block !important;
+    }
+    .photo-card .content > img {
+        max-height:400px ;
+    }
+}
+
+
+/* Widest */
+@media screen and (min-width :1500px){
+    .photo-card{
+        display: grid;
+        grid-template-columns: 100% ;
+    }
+    .photo-card .content{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .photo-card .content > img {
+       min-width: 140px; 
+       height: 100%;
+    }
+    .photo-card h3, .photo-card a{
+        text-align: left;
+        text-decoration: none;
+        width: 100%;
+    }
+    .photo-card p{
+        max-width: 90%;
+    }
+
+    html{
+        padding: 0;
+        margin: 0px 20px;
+    }
+    .wider__screen__photo, .wider__screen__anim {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        height: 350px;
+        gap: 10px;
+    }
+}
+
+
+
